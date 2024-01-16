@@ -37,14 +37,13 @@ func (c *ListOrdersUseCase) Execute() (OrderListOutputDTO, error) {
 	var outputOrders []OrderOutputDTO
 
 	for _, order := range orders {
-		order.CalculateFinalPrice()
 		outputOrders = append(
 			outputOrders,
 			OrderOutputDTO{
 				ID:         order.ID,
 				Price:      order.Price,
 				Tax:        order.Tax,
-				FinalPrice: order.Price + order.Tax,
+				FinalPrice: order.FinalPrice,
 			},
 		)
 	}
