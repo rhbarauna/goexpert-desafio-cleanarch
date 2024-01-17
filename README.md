@@ -18,7 +18,7 @@ This is a Go project that implements an order system. The system allows users to
 
    ```bash
    docker-compose up
-   
+   ```
 
    This command will start the database services needed for the project.
 
@@ -28,17 +28,18 @@ This is a Go project that implements an order system. The system allows users to
 
    ```bash
    make migrate
+   ```
 
   This will create the necessary tables in the database.
 
 ## Running the Main Program
 
-   In the cmd/ordersystem directory, run the following command to start the main program:
+In the cmd/ordersystem directory, run the following command to start the main program:
+   ```bash
+   go run main.go wire_gen.go
+   ```
 
-    ```bash
-    go run main.go wire_gen.go
-  
-  This will start the Order System application.
+This will start the Order System application.
 
 ## Testing the API Routes
 
